@@ -1,0 +1,84 @@
+2020-07-25 12:00:57 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Driver.php on line 92
+Stack Trace:
+#0 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Driver.php(92): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Connection.php(390): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(1096): Cake\Database\Connection->getSchemaCollection()
+#8 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(1050): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'email_inboxes', 'EmailInboxes')
+#12 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('EmailInboxes')
+#13 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/BakeShell.php(282): Bake\Shell\Task\ModelTask->main('EmailInboxes')
+#14 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(64): Bake\Shell\BakeShell->Bake\Shell\{closure}('EmailInboxes', 0)
+#15 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/BakeShell.php(283): Cake\Collection\Collection->each(Object(Closure))
+#16 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/Shell.php(517): Bake\Shell\BakeShell->all('email_inboxes')
+#17 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#18 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 /var/www/html/simpliance/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2020-07-26 04:34:03 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Driver.php on line 92
+Stack Trace:
+#0 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Driver.php(92): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Database/Connection.php(390): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(1096): Cake\Database\Connection->getSchemaCollection()
+#8 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(1050): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'email_attachmen...', 'EmailAttachment...')
+#12 /var/www/html/simpliance/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('EmailAttachment...')
+#13 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/Shell.php(531): Bake\Shell\Task\ModelTask->main('email_attachmen...')
+#14 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#15 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#16 /var/www/html/simpliance/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#17 /var/www/html/simpliance/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#18 {main}
+
+
+2020-07-26 06:28:59 Warning: Warning (512): Association property name "email" clashes with field of same name of table "email_settings". You should explicitly specify the "propertyName" option. in [/var/www/html/simpliance/vendor/cakephp/cakephp/src/ORM/Association.php, line 800]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 168
+Cake\ORM\Association::getProperty() - CORE/src/ORM/Association.php, line 800
+Bake\Shell\Task\ModelTask::getEntityPropertySchema() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 584
+Bake\Shell\Task\ModelTask::getTableContext() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 137
+Bake\Shell\Task\ModelTask::bake() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 114
+Bake\Shell\Task\ModelTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 282
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 283
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE/src/Console/CommandRunner.php, line 385
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 162
+[main] - ROOT/bin/cake.php, line 12
+
+
+
+2020-07-26 06:29:01 Warning: Warning (512): Association property name "email" clashes with field of same name of table "email_settings". You should explicitly specify the "propertyName" option. in [/var/www/html/simpliance/vendor/cakephp/cakephp/src/ORM/Association.php, line 800]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 168
+Cake\ORM\Association::getProperty() - CORE/src/ORM/Association.php, line 800
+Bake\Utility\Model\AssociationFilter::filterAssociations() - ROOT/vendor/cakephp/bake/src/Utility/Model/AssociationFilter.php, line 94
+Bake\Shell\Task\TemplateTask::_filteredAssociations() - ROOT/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php, line 433
+Bake\Shell\Task\TemplateTask::_loadController() - ROOT/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php, line 301
+Bake\Shell\Task\TemplateTask::main() - ROOT/vendor/cakephp/bake/src/Shell/Task/TemplateTask.php, line 142
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 282
+Cake\Collection\Collection::each() - CORE/src/Collection/CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT/vendor/cakephp/bake/src/Shell/BakeShell.php, line 283
+Cake\Console\Shell::runCommand() - CORE/src/Console/Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE/src/Console/CommandRunner.php, line 385
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 162
+[main] - ROOT/bin/cake.php, line 12
+
+
+
